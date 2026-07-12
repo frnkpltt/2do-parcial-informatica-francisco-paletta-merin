@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>ejercicio</title>
+</head>
+<body>
+
+    <!-- Paso 1: ingresar cantidad de obras -->
+        <section id="paso1">
+        <label for="cantidadObras">Cantidad de obras:</label>
+        <input type="number" id="cantidadObras">
+        <button id="btnCantidad">Confirmar</button>
+        </section>
+
+        <!-- Paso 2: ingresar datos de cada obra -->
+        <section id="paso2" style="display: none;">
+        <label for="nombreObra">Nombre de la obra:</label>
+        <input type="text" id="nombreObra">
+        
+        <label for="duracionObra">Duración (minutos):</label>
+        <input type="number" id="duracionObra">
+        
+        <label for="pesoObra">Peso del archivo (MB):</label>
+        <input type="number" id="pesoObra">
+        
+        <button id="btnObra">Agregar obra</button>
+        </section>
+
+        <!-- Paso 3: datos globales -->
+        <section id="paso3" style="display: none;">
+        <label for="tiempoTransferencia">Tiempo de transferencia (ms/MB):</label>
+        <input type="number" id="tiempoTransferencia">
+        
+        <label for="costoMensual">Costo mensual por MB:</label>
+        <input type="number" id="costoMensual">
+        
+        <button id="btnCalcular">Calcular</button>
+        </section>
+
+        <!-- Resultados -->
+        <section id="resultados" style="display: none;"s>
+        <p id="duracionTotal"></p>
+        <p id="duracionPromedio"></p>
+        <p id="obraMayor"></p>
+        <p id="tiempoDescarga"></p>
+        <p id="presupuestoAnual"></p>
+        <button id="btnReiniciar">Reiniciar</button>
+        </section>
+
+        <script src="ejercicio.js"></script>
+</body>
+
+</html>
