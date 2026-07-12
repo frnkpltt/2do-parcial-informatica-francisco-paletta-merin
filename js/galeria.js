@@ -1,3 +1,4 @@
+// array de obras verticales con nombre, año e imagen
 let obrasVerticales = [
     { nombre: 'Lolabelle in the Bardo', anio: 2011, imagen: 'img/anderson-1.jpg' },
     { nombre: 'Chalkroom', anio: 2017, imagen: 'img/anderson-2.jpg' },
@@ -5,8 +6,10 @@ let obrasVerticales = [
     { nombre: 'United States Live', anio: 1983, imagen: 'img/obra3.jpg' }
 ];
 
+// variable para controlar el estado del diseño (pequeño o grande)
 let disenioGrande = false;
 
+// funcion que genera el html de la galeria y lo inserta en el DOM
 function generarGaleria() {
     let contenedor = document.getElementById('galeria');
     let html = '';
@@ -39,23 +42,26 @@ function generarGaleria() {
     html += '</div>';
     html += '</div>';
 
-    // foto horizontal
+    // foto horizontal que ocupa el ancho completo
     html += '<div class="tarjeta tarjeta-horizontal">';
     html += '<img src="img/obra2.jpg" alt="Big Science">';
     html += '<p class="obra-nombre">Big Science</p>';
     html += '<p class="obra-anio">1982</p>';
     html += '</div>';
 
-    // video
+    // video de youtube al final de la galeria
     html += '<div class="tarjeta tarjeta-video">';
     html += '<iframe width="560" height="315" src="https://www.youtube.com/embed/ABjmQCxA7UU?si=pQfa5QIlmllwyDUj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
     html += '<p class="obra-nombre">Tiny Desk Home</p>';
     html += '<p class="obra-anio">2021</p>';
     html += '</div>';
 
+    // insertamos todo el HTML generado en el contenedor
     contenedor.innerHTML = html;
 }
 
+// funcion que alterna el tamaño de las imagenes verticales
+// usa la variable disenioGrande para saber si debe ponerlas grandes o pequeñas
 function cambiarDisenio() {
     let imagenes = document.querySelectorAll('.tarjeta-vertical img');
     disenioGrande = !disenioGrande;
@@ -69,6 +75,7 @@ function cambiarDisenio() {
     }
 }
 
+// cuanndo el DOM esta listo, generamos la galeria y asignamos el evento al boton
 document.addEventListener('DOMContentLoaded', function() {
     generarGaleria();
     document.getElementById('btnCambioDiseno').addEventListener('click', cambiarDisenio);
