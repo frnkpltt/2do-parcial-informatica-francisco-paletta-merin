@@ -1,57 +1,68 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
-    <title>ejercicio</title>
+    <title>Laurie Anderson - Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <!-- Paso 1: ingresar cantidad de obras -->
-        <section id="paso1">
-        <label for="cantidadObras">Cantidad de obras:</label>
-        <input type="number" id="cantidadObras">
-        <button id="btnCantidad">Confirmar</button>
-        </section>
+        <header>
+            <h1>Laurie Anderson</h1>
+        </header>
 
-        <!-- Paso 2: ingresar datos de cada obra -->
-        <section id="paso2" style="display: none;">
-        <label for="nombreObra">Nombre de la obra:</label>
-        <input type="text" id="nombreObra">
-        
-        <label for="duracionObra">Duración (minutos):</label>
-        <input type="number" id="duracionObra">
-        
-        <label for="pesoObra">Peso del archivo (MB):</label>
-        <input type="number" id="pesoObra">
-        
-        <button id="btnObra">Agregar obra</button>
-        </section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="datos-curiosos.html">Datos Curiosos</a></li>
+                <li><a href="calculadora.html">Calculadora</a></li>
+            </ul>
 
-        <!-- Paso 3: datos globales -->
-        <section id="paso3" style="display: none;">
-        <label for="tiempoTransferencia">Tiempo de transferencia (ms/MB):</label>
-        <input type="number" id="tiempoTransferencia">
-        
-        <label for="costoMensual">Costo mensual por MB:</label>
-        <input type="number" id="costoMensual">
-        
-        <button id="btnCalcular">Calcular</button>
-        </section>
+        </nav>
+        <main>
+            <!-- bloque contenedor principal-->
+            <div class="contenedor">
 
-        <!-- Resultados -->
-        <section id="resultados" style="display: none;"s>
-        <p id="duracionTotal"></p>
-        <p id="duracionPromedio"></p>
-        <p id="obraMayor"></p>
-        <p id="tiempoDescarga"></p>
-        <p id="presupuestoAnual"></p>
-        <button id="btnReiniciar">Reiniciar</button>
-        </section>
+                <!-- layout 3 columnas-->
+                <div class="columnas">
+                    <article class="columna">
+                        <blockquote>"El lenguaje es un virus que viene del espacio exterior."</blockquote>
+                        <p>— Laurie Anderson</p>
+                    </article>
 
-        <script src="ejercicio.js"></script>
+                    <article class="columna">
+                        <h2>Una voz singular en el arte contemporáneo</h2>
+                        <p>Laurie Anderson es una artista multidisciplinaria cuya obra abarca performance, música, cine y arte multimedia.</p>
+                        <p>Su trabajo se distingue por el uso de la voz como elemento central. A través de relatos, textos y composiciones sonoras, crea piezas que invitan a reflexionar sobre la comunicación, la memoria y la percepción.</p>
+                        <p>Además, su enfoque integra elementos visuales, musicales y performáticos, generando obras que no se limitan a un único formato.</p>
+                    </article>
+
+                    <article class="columna">
+                        <h2>Trayectoria y proyección internacional</h2>
+                        <p>Nacida en Estados Unidos, Laurie Anderson comenzó su carrera en el circuito del arte experimental y la performance en la década de 1970.</p>
+                        <p>Uno de sus trabajos más conocidos es O Superman, una pieza que combina música electrónica y narrativa, y que alcanzó difusión internacional.</p>
+                        <p>A lo largo de su trayectoria, ha presentado sus obras en museos, teatros y festivales de todo el mundo.</p>
+                    </article>
+
+                </div>
+
+                    <!-- dato curioso -->
+                    <section id="datosCuriosos">
+                        <h2>¿Sabías que...?</h2>
+                        <p id="textoCurioso"></p>
+                            <button id="btnCurioso">Nuevo dato curioso</button>
+                    </section>
+
+            </div>
+        </main>
+    
+        <footer>
+            <p>Contacto: laurie@artedigital.com</p>
+            <p>Segundo Parcial - Informática General - Artes Multimediales - UNA</p>
+        </footer>
+
 </body>
-
 </html>
