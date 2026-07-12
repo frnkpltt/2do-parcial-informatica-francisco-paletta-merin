@@ -42,7 +42,7 @@ body {
     padding: 2rem;
     background: linear-gradient(
         180deg,
-        rgba(10, 22, 40, 0.2) 0%,
+        rgba(10, 22, 40, 0.73) 0%,
         rgba(0, 15, 30, 0.85) 100%
     );
 }
