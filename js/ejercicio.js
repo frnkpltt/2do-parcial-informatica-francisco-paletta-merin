@@ -37,47 +37,42 @@ function confirmarCantidad() {
 }
 
 function agregarObra() { 
-    //leemos los valores 
     let nombre = document.getElementById('nombreObra').value;
     let duracion = document.getElementById('duracionObra').value;
     let peso = document.getElementById('pesoObra').value;
 
-    console.log('nombre:', nombre);
-    console.log('duracion:', duracion);
-    console.log('peso:', peso);
-    //validamos
-    if (nombre === "" || isNaN(duracion) || duracion <= 0 || isNaN(peso) || peso <= 0 ) {
-        alert('completa todos los campos correctamente');
+    // validamos
+    if (nombre === "" || isNaN(duracion) || duracion <= 0 || isNaN(peso) || peso <= 0) {
+        alert('Completá todos los campos correctamente');
         return;
     }
 
-let obra = { 
-    nombre: nombre, 
-    duracion: Number(duracion),
-    peso: Number(peso)
-};
-obras.push(obra);
+    // creamos el objeto y lo agregamos al array
+    let obra = { 
+        nombre: nombre, 
+        duracion: Number(duracion),
+        peso: Number(peso)
+    };
+    obras.push(obra);
+    obrasIngresadas++;
 
-obrasIngresadas++;
+    // limpiamos los inputs
+    document.getElementById('nombreObra').value = '';
+    document.getElementById('duracionObra').value = '';
+    document.getElementById('pesoObra').value = '';
 
-document.getElementById('nombreObra').value = '';
-document.getElementById('duracionObra').value = '';
-document.getElementById('pesoObra').value = '';
+    // actualizamos el contador — reemplaza el alert
+    document.getElementById('contadorObras').textContent = 'Obra ' + obrasIngresadas + ' de ' + cantidadObras + ' ingresada.';
 
-alert('obra agregada. obras ingresadas: ' + obrasIngresadas + ' de ' + cantidadObras);
-// si ya ingresamos todas las obras
+    // si ya ingresamos todas las obras
     if (obrasIngresadas === cantidadObras) {
-        // deshabilitamos el paso 2
         document.getElementById('nombreObra').disabled = true;
         document.getElementById('duracionObra').disabled = true;
         document.getElementById('pesoObra').disabled = true;
         document.getElementById('btnObra').disabled = true;
-        
-        // habilitamos el paso 3
         document.getElementById('paso3').style.display = 'block';
     }
-
-    }
+}
 
 function calcular() {
     //leemos los valores

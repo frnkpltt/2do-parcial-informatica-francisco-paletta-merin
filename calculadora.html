@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurie Anderson - Repositorio de Grabaciones</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Laurie Anderson</h1>
+        <p>Performance, tecnología y narración en el arte contemporáneo</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="pagina2.html">Obra</a>
+        <a href="pagina3.html">Repositorio</a>
+    </nav>
+
+    <main>
+        <div class="contenedor">
+
+            <section id="intro-ejercicio">
+                <h2>Repositorio de Grabaciones Digitales</h2>
+                <p>Este sistema permite gestionar el repositorio de grabaciones digitales de obras musicales de Laurie Anderson. Ingresá la cantidad de obras, los datos de cada una y los parámetros del repositorio para obtener los resultados.</p>
+            </section>
+
+            <!-- Paso 1: cantidad de obras -->
+            <section id="paso1">
+                <h3>Paso 1: ¿Cuántas obras querés ingresar?</h3>
+                <label for="cantidadObras">Cantidad de obras:</label>
+                <input type="number" id="cantidadObras" min="1">
+                <button id="btnCantidad">Confirmar</button>
+            </section>
+
+            <!-- Paso 2: datos de cada obra -->
+            <section id="paso2" style="display: none;">
+                <h3>Paso 2: Ingresá los datos de cada obra</h3>
+                <p id="contadorObras"></p>
+
+                <label for="nombreObra">Nombre de la obra:</label>
+                <input type="text" id="nombreObra">
+
+                <label for="duracionObra">Duración (minutos):</label>
+                <input type="number" id="duracionObra" min="0">
+
+                <label for="pesoObra">Peso del archivo (MB):</label>
+                <input type="number" id="pesoObra" min="0">
+
+                <button id="btnObra">Agregar obra</button>
+            </section>
+
+            <!-- Paso 3: datos globales -->
+            <section id="paso3" style="display: none;">
+                <h3>Paso 3: Parámetros del repositorio</h3>
+
+                <label for="tiempoTransferencia">Tiempo de transferencia (ms/MB):</label>
+                <input type="number" id="tiempoTransferencia" min="0">
+
+                <label for="costoMensual">Costo mensual por MB ($):</label>
+                <input type="number" id="costoMensual" min="0">
+
+                <button id="btnCalcular">Calcular resultados</button>
+            </section>
+
+            <!-- Resultados -->
+            <section id="resultados" style="display: none;">
+                <h3>Resultados</h3>
+                <p id="duracionTotal"></p>
+                <p id="duracionPromedio"></p>
+                <p id="obraMayor"></p>
+                <p id="tiempoDescarga"></p>
+                <p id="presupuestoAnual"></p>
+                <button id="btnReiniciar">Reiniciar</button>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Contacto: laurie@artedigital.com</p>
+        <p>Segundo Parcial - Informática General - Artes Multimediales - UNA</p>
+    </footer>
+
+    <script src="js/ejercicio.js"></script>
+    
+</body>
+</html>
