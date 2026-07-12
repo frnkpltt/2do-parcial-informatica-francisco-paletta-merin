@@ -48,9 +48,9 @@ function generarGaleria() {
 
     // video
     html += '<div class="tarjeta tarjeta-video">';
-    html += '<iframe src="https://www.youtube.com/embed/CEHm9LK9vtU?si=oSGivQp0p9AKxTBz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-    html += '<p class="obra-nombre">O Superman</p>';
-    html += '<p class="obra-anio">1981</p>';
+    html += '<iframe width="560" height="315" src="https://www.youtube.com/embed/ABjmQCxA7UU?si=pQfa5QIlmllwyDUj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+    html += '<p class="obra-nombre">Tiny Desk Home</p>';
+    html += '<p class="obra-anio">2021</p>';
     html += '</div>';
 
     contenedor.innerHTML = html;
