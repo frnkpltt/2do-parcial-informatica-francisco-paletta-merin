@@ -32,6 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 20px;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
@@ -39,6 +40,11 @@ body {
     max-width: 1200px;
     width: 100%;
     padding: 2rem;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 22, 40, 0.2) 0%,
+        rgba(0, 15, 30, 0.85) 100%
+    );
 }
 
 /* ===== HEADER ===== */
@@ -112,6 +118,10 @@ main {
     max-width: 1200px;
 }
 
+p {
+    font-size: 1.5rem;
+}
+
 /* ===== LAYOUT 3 COLUMNAS ===== */
 .columnas {
     display: flex;
@@ -119,6 +129,15 @@ main {
     gap: 2rem;
     margin: 2rem 0;
 }
+
+.foto-perfil {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+    filter: grayscale(20%);
+}
+
 
 .columna {
     flex: 1;
@@ -146,19 +165,23 @@ main {
 }
 
 .columna p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
 }
 
 blockquote {
     font-family: 'Abel', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--azul-neon);
     line-height: 1.6;
     font-style: italic;
     border-left: 3px solid var(--verde-neon);
-    padding-left: 1rem;
+    padding-left: 1.5rem;
+    text-align: center;
+    margin-top: 5rem;
 }
 
 /* ===== DATO CURIOSO ===== */
@@ -177,13 +200,13 @@ blockquote {
 #datosCuriosos h2 {
     font-family: 'Abel', sans-serif;
     color: var(--verde-neon);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
     letter-spacing: 0.1rem;
 }
 
 #textoCurioso {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
     min-height: 3rem;
@@ -382,7 +405,7 @@ input:focus {
 }
 
 .columna-angosta p {
-    font-size: 0.95rem;
+    font-size: 1.25rem;
     line-height: 1.7;
     margin-bottom: 0.8rem;
 }
@@ -396,5 +419,28 @@ input:focus {
     color: var(--verde-neon);
     padding: 0.4rem 0;
     border-bottom: 1px solid rgba(0, 170, 255, 0.2);
-    font-size: 0.95rem;
+    font-size: 1rem;
+}
+
+/* ===== RESULTADOS ===== */
+#resultados p {
+    color: var(--blanco);
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid var(--verde-neon);
+    background-color: rgba(0, 255, 136, 0.05);
+}
+
+#resultados p:nth-child(odd) {
+    border-left-color: var(--azul-neon);
+    background-color: rgba(0, 170, 255, 0.05);
+}
+
+#resultados h3 {
+    color: var(--verde-neon);
+    font-family: 'Abel', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
 }
