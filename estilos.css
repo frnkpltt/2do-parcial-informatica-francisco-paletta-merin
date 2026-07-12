@@ -1,0 +1,224 @@
+/* ===== IMPORTACIÓN DE FUENTE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+/* ===== VARIABLES ===== */
+:root {
+    --negro: #050810;
+    --azul-profundo: #0a1628;
+    --azul-electrico: #0066ff;
+    --azul-neon: #00aaff;
+    --violeta: #7700ff;
+    --verde-neon: #00ff88;
+    --verde-electrico: #00cc66;
+    --blanco: #f0f0ff;
+    --acento: #4488ff;
+}
+
+/* ===== RESET Y BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--negro);
+    background-image: url('img/fondo.png');
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: var(--blanco);
+    font-family: Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.contenedor {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+}
+
+/* ===== HEADER ===== */
+header {
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(
+        135deg,
+        rgba(5, 8, 16, 0.95) 0%,
+        rgba(0, 40, 80, 0.95) 50%,
+        rgba(0, 20, 40, 0.95) 100%
+    );
+    border-bottom: 2px solid var(--verde-neon);
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Abel', sans-serif;
+    font-size: 3rem;
+    color: var(--verde-neon);
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+header p {
+    color: var(--azul-neon);
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* ===== NAV ===== */
+nav {
+    width: 100%;
+    background-color: rgba(10, 22, 40, 0.9);
+    border-bottom: 1px solid var(--azul-electrico);
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+nav a {
+    font-family: 'Abel', sans-serif;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: var(--verde-neon);
+    border: 1px solid var(--verde-neon);
+}
+
+nav a:visited {
+    color: var(--blanco);
+}
+
+nav a:active {
+    color: var(--violeta);
+}
+
+/* ===== MAIN ===== */
+main {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* ===== LAYOUT 3 COLUMNAS ===== */
+.columnas {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.columna {
+    flex: 1;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 22, 40, 0.85) 0%,
+        rgba(0, 15, 30, 0.85) 100%
+    );
+    border: 1px solid var(--azul-electrico);
+    border-top: 3px solid var(--verde-neon);
+    padding: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+.columna:hover {
+    border-top-color: var(--azul-neon);
+}
+
+.columna h2 {
+    font-family: 'Abel', sans-serif;
+    color: var(--verde-neon);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.columna p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5rem;
+    color: var(--azul-neon);
+    line-height: 1.6;
+    font-style: italic;
+    border-left: 3px solid var(--verde-neon);
+    padding-left: 1rem;
+}
+
+/* ===== DATO CURIOSO ===== */
+#datosCuriosos {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 20, 40, 0.85) 0%,
+        rgba(0, 50, 30, 0.85) 100%
+    );
+    border: 1px solid var(--verde-neon);
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+#datosCuriosos h2 {
+    font-family: 'Abel', sans-serif;
+    color: var(--verde-neon);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+#textoCurioso {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    min-height: 3rem;
+    color: var(--blanco);
+}
+
+/* ===== BOTONES ===== */
+button {
+    background-color: transparent;
+    color: var(--verde-neon);
+    border: 1px solid var(--verde-neon);
+    padding: 0.7rem 2rem;
+    font-family: 'Abel', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: var(--verde-neon);
+    color: var(--negro);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(
+        135deg,
+        rgba(5, 8, 16, 0.95) 0%,
+        rgba(0, 40, 20, 0.95) 100%
+    );
+    border-top: 2px solid var(--verde-neon);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--azul-neon);
+}
